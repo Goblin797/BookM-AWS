@@ -128,7 +128,7 @@ const createUser = async (req, res) => {
         let pincode = data.address.pincode
         if(street){
             let validateStreet = /^[a-zA-Z0-9]/
-            if (!validateStreet.test.trim(street)) {
+            if (!validateStreet.test(street)) {
                 return res.status(400).send({ status: false, message: "enter valid street name" })
             }
         }
